@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "install": "^0.13.0",
+    "sqlite3": "^5.0.5",
+    "supertest": "^6.2.2",
+    "uuid": "^8.3.2"
+  },
+  "name": "investment-be",
+  "version": "1.0.0",
+  "main": "database.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
