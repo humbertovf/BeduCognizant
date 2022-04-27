@@ -1,49 +1,30 @@
-const users = [{email: "myemail@mail.com", password: "securePassword", counter: 0}]
-
+const users = [{ email: "myemail@mail.com", password: "securePassword" }]
+let counter = 0;
 
 const login = (userCredentials) => {
     for (let i = 0; i < users.length; i++) {
-        
-        if (userCredentials.email === users[i].email && userCredentials.password === users[i].password) {
-            
-            users.counter = 0;
+
+        if (userCredentials.email === users[0].email && userCredentials.password === users[0].password) {
+
+            //users.counter = 0;
             getToken(users);
             return "Bienvenido al sistema";
 
 
-        }else if (userCredentials.email === users[i].email && userCredentials.password != users[i].password) {
-            users.counter += 1;
+        } else if (userCredentials.email === users[0].email && userCredentials.password != users[0].password) {
+            //users.counter += 1;
+            counter++;
+            if (counter > 2) {
+
+                return "Máxima cantidad de intentos alcanzada, espere 5 minutos";
+            }
             return "Contraseña incorrecta";
 
-        }else if (userCredentials.email != users[i].email && userCredentials.password === users[i].password) {
-           
-            users.counter += 1;            
-            return "Usuario no registrado";
         }
-
+        return "User not found";
     }
 
-    /*if(counter < 3){
-        for (let i = 0; i < users.length; i++) {
-            if (userCredentials.email === users[0].email){
-                if(userCredentials.password === users[0].password) {
-                    console.log(getToken(users))
-                    return "Bienvenido al sistema";
-                }
-                if(userCredentials.password != users[0].password){
-                    users.counter += 1;
-                    return "Contraseña incorrecta";
-                }
-            }else{
-                users.counter += 1;
-                return "Usuario inválido"
-            }
-        }
-    }
-    else{
-        setTimeout("Limite de intentos excedidos", 500000);
-    }
-}*/
+}
 
 const getToken = (userCredentials) => {
     for (let i = 0; i < users.length; i++) {
@@ -59,9 +40,9 @@ const getToken = (userCredentials) => {
         }
 
     }
-    
+
 }
 
 
 
-module.exports = {login, getToken};
+module.exports = { login, getToken };
