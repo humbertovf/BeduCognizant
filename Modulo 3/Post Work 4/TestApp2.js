@@ -1,11 +1,11 @@
 const axios = require('axios');
-const {login} = require("./Login2");
-const {getToken} = require("./Login2");
+const { login } = require("./Login2");
+const { getToken } = require("./Login2");
 
 
 const executeTest = async (input, expectedOutput, functionToExecute) => {
     const actualOutput = await functionToExecute(input)
-    
+
     if (actualOutput !== expectedOutput) {
         console.log(`Test fail. Expected output: ${expectedOutput}  actual output: ${actualOutput}`)
     } else {
@@ -28,25 +28,25 @@ const makePostApiCall2 = async (userCredentials) => {
 
 
 const testReturnsSuccessMessageWhenUserLogsInWithValidEmailAndPassword = () => {
-    const userCredentials = {email: "myemail@mail.com", password: "securePassword"}
+    const userCredentials = { email: "myemail@mail.com", password: "securePassword" }
     const successMessage = "Bienvenido al sistema"
     executeTest(userCredentials, successMessage, makePostApiCall)
 }
 
 const testReturnsInvalidPasswordMessageWhenUserLogsInWithValidEmailAndPassword = () => {
-    const userCredentials = {email: "myemail@mail.com", password: "differentPassword"}
+    const userCredentials = { email: "myemail@mail.com", password: "differentPassword" }
     const successMessage = "Contraseña incorrecta"
     executeTest(userCredentials, successMessage, makePostApiCall)
 }
 
 const testReturnsUserNotFoundMessageWhenUserLogsInWithValidEmailAndPassword = () => {
-    const userCredentials = {email: "unregistered_email@mail.com", password: "securePassword"}
+    const userCredentials = { email: "unregistered_email@mail.com", password: "securePassword" }
     const successMessage = "Usuario no registrado"
     executeTest(userCredentials, successMessage, makePostApiCall)
 }
 
 const encodingEmailF = () => {
-    const userCredentials = {email: "myemail@mail.com", password: "securePassword"}
+    const userCredentials = { email: "myemail@mail.com", password: "securePassword" }
     //console.log(encrypted);
     //const successMessage = ;
     const successMessage = "Bienvenido al sistema";
@@ -59,3 +59,4 @@ testReturnsSuccessMessageWhenUserLogsInWithValidEmailAndPassword()
 testReturnsInvalidPasswordMessageWhenUserLogsInWithValidEmailAndPassword()
 testReturnsUserNotFoundMessageWhenUserLogsInWithValidEmailAndPassword()
 encodingEmailF()
+
