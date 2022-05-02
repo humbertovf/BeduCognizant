@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TechnologyTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-05-02T18:17:09" hostname="LTMX081570" time="0.008">
+  <properties/>
+  <testcase name="delete()" classname="TechnologyTest" time="0.006"/>
+  <testcase name="add()" classname="TechnologyTest" time="0.0"/>
+  <testcase name="save()" classname="TechnologyTest" time="0.001"/>
+  <system-out><![CDATA[1
+2
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
