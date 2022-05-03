@@ -44,7 +44,7 @@ public class TechnologyTest {
         assertNotEquals(originalListSize, newListSize, "List size shouldn't be the same");
         assertEquals(originalListSize, lastTechnologyIndex, "List size should be the same");
         assertEquals(expectedSlug,latestTechnology.slug,"Slug should have been updated");
-        assertEquals(latestTechnology.name,latestTechnology.name,"Name should have not been updated");
+        assertEquals(existingTechnology.name,latestTechnology.name,"Name should have not been updated");
     }
 
     @Test
