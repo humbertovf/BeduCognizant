@@ -44,7 +44,7 @@ public class InterviewTypeTest {
         assertNotEquals(originalListSize, newListSize, "List size should be the same");
         //assertEquals(originalListSize, newListSize, "List size should be the same");
         assertEquals(expectedSlug,latestInterviewType.slug,"Slug should have been updated");
-        assertEquals(latestInterviewType.name,latestInterviewType.name,"Name should have not been updated");
+        assertEquals(existingInterviewType.name,latestInterviewType.name,"Name should have not been updated");
     }
 
     @Test
