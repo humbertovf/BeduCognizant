@@ -1,1 +1,8 @@
+¿Qué lógica es compartida entre la aplicación de terminal y la aplicación web?
+El manejo de datos se hace en el back end.
 
+¿Qué pruebas decidiste implementar?
+Pruebas manuales usando postman.
+
+¿Crees que existe diferencia entre las pruebas hechas directamente a la clase interviewer y las realizadas al menú? ¿Por qué?
+Sí hay diferencia porque el menú está mas relacionado a la interfaz con el usuario final y la clase interviewer tiene las funciones principales de CRUD.
